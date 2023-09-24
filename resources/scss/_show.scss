@@ -1,0 +1,66 @@
+.show {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  fieldset {
+    border: 1px solid var(--boder-color);
+    border-bottom-width: 2px;
+    border-right-width: 2px;
+    padding: 10px;
+  }
+  legend {
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: right;
+    padding: 0 10px;
+  }
+
+  .data {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .result {
+      overflow: auto;
+      max-height: 200px;
+      max-width: 700px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      .ln {
+        padding: 5px;
+        white-space: pre;
+      }
+      .command {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        font-size: 1em;
+        align-items: center;
+        .material-symbols-outlined {
+          font-size: 1em;
+          color: teal;
+        }
+      }
+      .data {
+        font-size: 1em;
+      }
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    .buttons {
+      gap: 20px;
+    }
+
+    .label {
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.9em;
+    }
+
+    .upper {
+      text-transform: uppercase;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.tabpane {
+  padding: 10px;
+  display: grid;
+  grid-template-rows: 35px 1fr 40px;
+  align-items: center;
+  .header {
+    display: flex;
+    gap: 5px;
+    background-color: var(--secondary);
+    height: 100%;
+
+    button {
+      background-color: transparent;
+      font-size: 1em;
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
+    .title {
+      font-weight: 600;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 5px;
+      gap: 5px;
+      height: 100%;
+
+      &:hover {
+        color: var(--link-hover);
+      }
+      &.active {
+        background-color: var(--primary);
+        top: 1px;
+        border: 1px solid var(--boder-color);
+        border-bottom: none;
+      }
+    }
+  }
+
+  .content {
+    border: 1px solid var(--boder-color);
+    padding: 10px;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

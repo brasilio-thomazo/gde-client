@@ -1,0 +1,21 @@
+#app-list,
+#app-show {
+  .status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  td {
+    .status {
+      justify-content: space-between;
+    }
+  }
+  .online {
+    color: teal;
+    font-size: 1.2em;
+  }
+  .offline {
+    color: crimson;
+    font-size: 1.2em;
+  }
+}
