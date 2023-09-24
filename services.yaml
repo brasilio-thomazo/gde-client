@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  client-test01:
+    build: nginx-http
+    container_name: client-test01
+    volumes:
+      - .:/home/www
+      - ./.env-test:/home/www/.env
+    environment:
+      - POOL_UID=${PHP_FPM_POOL_UID:-1000}
+      - POOL_GID=${PHP_FPM_POOL_GID:-1000}
+    ports:
+      - 8001:80
+  client-test02:
+    build: nginx-http
+    container_name: client-test02
+    volumes:
+      - .:/home/www
+      - ./.env-test2:/home/www/.env
+    environment:
+      - POOL_UID=${PHP_FPM_POOL_UID:-1000}
+      - POOL_GID=${PHP_FPM_POOL_GID:-1000}
+    ports:
+      - 8002:80
