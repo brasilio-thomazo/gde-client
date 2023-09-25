@@ -173,6 +173,7 @@ class DatabaseSeeder extends Seeder
         $groups = $this->createGroups($document_types, $departments);
         $users = $this->createUsers($groups, $departments);
         $dirs = [['boleto'], ['comprovante'], ['contrato'], ['fiscal'], ['e-book', 'manual']];
+        /*
         $fake = fake();
 
         for ($i = 0; $i < 50; $i++) {
@@ -205,5 +206,6 @@ class DatabaseSeeder extends Seeder
                 }
             }
         }
+        */
     }
 }
