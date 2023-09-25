@@ -172,40 +172,5 @@ class DatabaseSeeder extends Seeder
         $document_types = $this->createDocumentTypes();
         $groups = $this->createGroups($document_types, $departments);
         $users = $this->createUsers($groups, $departments);
-        $dirs = [['boleto'], ['comprovante'], ['contrato'], ['fiscal'], ['e-book', 'manual']];
-        /*
-        $fake = fake();
-
-        for ($i = 0; $i < 50; $i++) {
-            $type_index = rand(0, count($document_types) - 1);
-            $department_index = rand(0, count($departments) - 1);
-            $dir_index = $type_index < count($dirs) ? $type_index : rand(0, count($dirs) - 1);
-
-            $doc = new Document([
-                'document_type_id' => $document_types[$type_index],
-                'department_id' => $departments[$department_index],
-                'code' => Str::random(8),
-                'identity' => $fake->cnpj(false),
-                'name' => $fake->name(),
-                'comment' => $fake->text(),
-                'storage' => Str::random(5),
-                'date_document' => $fake->dateTimeThisYear()->format('Y-m-d')
-            ]);
-            $doc->save();
-
-            $dir = getcwd() . '/test/files/';
-            $dir .= count($dirs[$dir_index]) == 1 ? $dirs[$dir_index][0] : $dirs[$dir_index][rand(0, count($dirs[$dir_index]) - 1)];
-            foreach (scandir($dir) as $file) {
-                if (str_ends_with($file, ".tiff")) {
-                    $filename = sprintf('%s/%s', $dir, $file);
-                    DocumentImage::factory()->create([
-                        'document_id' => $doc->id,
-                        'filename' => $filename,
-                        'storage_type' => StorageType::LOCAL,
-                    ]);
-                }
-            }
-        }
-        */
     }
 }
